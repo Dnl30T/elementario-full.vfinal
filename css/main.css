@@ -1,0 +1,334 @@
+:root{
+    --blue-dft: #0B699E;
+    --blue-dft-hv: #1f82bb;
+    --blue-dark: #053896;
+    --gray: #696969;
+    --gray-dark: #222222;
+    --gray-light: #f4f4f4;
+    --pink: #BC1BAC;
+    --pink-hv: #c746ba;
+}
+
+*{
+	margin: 0;
+    border: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e8e8e8;
+    overflow-x: hidden;
+}
+
+div#container{
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    max-width: 1600px;
+    height: 75px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.329) 0px 3px 6px, rgba(0, 0, 0, 0.274) 0px 3px 6px;
+}
+
+header
+div.logo{
+    width: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header
+div.logo img{
+    max-width: 60px;
+}
+
+header
+div.logo span{
+    font-family: "Aleo", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--blue-dft);
+}
+
+header nav{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+ul.nav_pages{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+ul.nav_pages a{
+    margin: 0 20px;
+    padding: 5px 10px;
+    color: var(--blue-dft);
+    transition: 300ms ease all;
+}
+
+ul.nav_pages a.pag_selected{
+    border-bottom: 4px solid var(--blue-dft);
+}
+
+ul.nav_pages a:hover{
+    background-color: #0b689e1e;
+}
+
+ul.nav_pages a li{
+    list-style: none;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input#checar{
+    position: absolute;
+    top: -100%;
+}
+
+label[for="checar"]{
+    width: 60px;
+    height: 60px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+label[for="checar"]
+div.line{
+    width: 100%;
+    height: 6px;
+    background-color: var(--blue-dft);
+    margin: 4px 0;
+}
+
+
+/*Responsivo*/
+
+@media screen and (max-width: 800px){
+    label[for="checar"]{
+        display: flex;
+        margin: 0 30px 0 0;
+    }
+
+    header{
+        justify-content: space-between;
+    }
+
+    header
+    div.logo{
+        justify-content: flex-start;
+        margin: 0 0 0 20px;
+    }
+
+    header nav{
+        position: fixed;
+        width: 70vw;
+        height: 100%;
+        min-width: 200px;
+        max-width: 350px;
+        position: fixed;
+        background-color: var(--gray-light);
+        right: -100%;
+        top: 75px;
+        z-index: 98;
+        align-items: flex-start;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        transition: 200ms ease all;
+    }
+
+    input#checar:checked ~ nav{
+        right: 0%;
+    }
+
+    ul.nav_pages{
+        padding: 20vw 0 0 40px;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    ul.nav_pages a{
+        padding: 0;
+        width: 50%;
+        margin: 0 0 40px 0;
+    }
+
+    ul.nav_pages a[data-nav]{
+        border-bottom: none;
+    }
+
+    ul.nav_pages a:hover{
+        background-color: inherit;
+    }
+
+    div.line{
+        transition: 100ms ease-out all;
+    }
+
+    input#checar:checked ~ label div.line:nth-child(1){
+        transform: rotate(-45deg);
+        position: relative;
+        top: 15px;
+    }
+
+    input#checar:checked ~ label div.line:nth-child(2){
+        opacity: 0;
+    }
+
+    input#checar:checked ~ label div.line:nth-child(3){
+        transform: rotate(45deg);
+        position: relative;
+        top: -15px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    header
+    div.logo{
+        width: auto;
+        margin: 0 0 0 40px;
+    }
+
+    header
+    div.logo span{
+        display: none;
+    }
+}
+
+footer{
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--gray-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    text-align: center;
+    color: #fff;
+    margin: 5px 0;
+}
+
+/*Sectios*/
+
+section.sec{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.cont-sec{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.image-bg{
+    background-image: url(../src/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+div.color-sec{
+    padding: 4vw 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b689ed0;
+}
+
+div.cx_tipo_cad h1{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+div.cx_btn{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+button.btn_tipo{
+    width: 200px;
+    margin: 10px 20px;
+    padding: 10px 0;
+    border-radius: 20px;
+    font-size: 24px;
+    color: var(--pink);
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/*Error*/
+
+section.cont_error{
+    width: 100%;
+    padding: 80px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.cx_error{
+    width: 100%;
+    padding: 10vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a.return_home button{
+    margin: 40px 0 0 0;
+    padding: 20px 30px;
+    color: #fff;
+    font-size: 18px;
+    background-color: var(--pink);
+    cursor: pointer;
+    transition: 250ms ease;
+}
+
+a.return_home button:hover{
+    background-color: var(--pink-hv);
+}

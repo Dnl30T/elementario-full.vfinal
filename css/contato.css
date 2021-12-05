@@ -1,0 +1,54 @@
+section.sec.contato{
+    background-color: #fff;
+}
+h1.tt_contato{
+    font-size: 40px;
+    color: #fff;
+    padding: 0 0 40px 0;
+}
+
+div.cont_form_cont{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+div.cont_form_cont form{
+    width: 100%;
+    max-width: 600px;
+    margin: -5vw 0 0 0;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+textarea[name="mensagem"]{
+    color: var(--gray-dark);
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 5px 20px;
+    height: 15vw;
+    max-height: 190px;
+    border: 2px solid var(--gray);
+    resize: none;
+}
+
+div.logo-info.contato{
+    margin: 30px 0;
+}
+
+div.logo-info.contato img{
+    max-width: 130px;
+}
+
+div.logo-info.contato h1{
+    color: var(--blue-dft);
+    font-size: 30px;
+}
+div.logo-info.contato h2{
+    color: var(--gray-dark);
+    font-size: 20px;
+}

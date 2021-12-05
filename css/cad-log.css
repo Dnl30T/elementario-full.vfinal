@@ -1,0 +1,148 @@
+div.cx_log{
+    flex-direction: row;
+}
+div.cx_log.color-sec{
+    padding: 7vw 0 15vw 0;
+}
+div.cx_log h1{
+    color: var(--gray-dark);
+    font-size: 40px;
+    text-align: center;
+}
+div.cont-cad-log{
+    width: 100%;
+    max-width: 600px;
+}
+div.cx-cad-log{
+    margin: 0 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+form.f_cad_log{
+    display: flex;
+    flex-direction: column;
+}
+div.inp_cad{
+    display: flex;
+    flex-direction: column;
+}
+div.inp_cad input[type]{
+    color: var(--gray-dark);
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 8px 20px;
+    border: 2px solid var(--gray);
+}
+
+div.inp_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.inp_btn input[type="submit"]{
+    width: 130px;
+    padding: 7px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+div.inp_btn input[type="submit"]{
+    color: #fff;
+    background-color: var(--pink);
+    border: 2px solid var(--pink);
+}
+
+
+
+div.logo-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.logo-info img{
+    width: 200px;
+}
+
+div.logo-info h1{
+    color: #fff;
+    text-align: center;
+    padding: 0 10px;
+    font-family: "Aleo",Arial, Helvetica, sans-serif;
+}
+
+div.logo-info h2{
+    color: #fff;
+    text-align: center;
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.log_title_res{
+    display: none;
+}
+
+p.valida_senha{
+    margin: 20px 0 0 0;
+    padding: 0 10px;
+    color: var(--pink);
+    font-size: 18px;
+
+    animation: bottom_up_fade .5s forwards;
+}
+
+@keyframes bottom_up_fade{
+    0%{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 800px){
+    div.cx_log{
+        flex-direction: column;
+    }
+    h1.log_title_res{
+        display: block;
+        color: #fff !important;
+        margin: 0 0 20px 0;
+    }
+    div.cont-cad-log{
+        position: relative;
+        z-index: 1;
+        width: 95%;
+        max-width: none;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    div.cx-cad-log{
+        margin: 0 10px 0 0;
+    }
+    form.f_cad_log h1{
+        display: none;
+    }
+
+    div.logo-info{
+        width: 100%;
+        margin: -40px 0 0 0;
+        padding: 50px 0 35px 0;
+        background-color: #fff;
+    }
+
+    div.logo-info img{
+        width: 120px;
+    }
+    
+    div.logo-info h1{
+        color: var(--blue-dft);
+    }
+    div.logo-info h2{
+        color: var(--gray-dark);
+    }
+}
